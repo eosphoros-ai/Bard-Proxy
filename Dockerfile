@@ -1,17 +1,20 @@
-# 使用 Python 3.8 作为基础镜像
-FROM python:3.8
+# Using python3.8-alpine as the base image.
+FROM python:3.8-alpine
 
-# 将当前目录下的文件复制到容器的 /app 目录中
+# Copy all the files.
 COPY . /app
 
-# 设置工作目录为 /app
+# set work dir /app
 WORKDIR /app
 
-# 安装依赖包
+# install gcc, g++
+RUN apk update && apk add --no-cache gcc g++
+
+# install dependencies by requirements.txt
 RUN pip install -r requirements.txt
 
-# 暴露容器的端口
+# expose port 8671
 EXPOSE 8671
 
-# 运行应用
+# start app.
 CMD ["python", "main.py"]
