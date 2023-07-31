@@ -15,8 +15,10 @@ Access from <a ref="https://bard.google.com/">Bard</a>
 ### Method 1: Quick Start by Docker 
 
 ```commandline
+docker pull shinexy/bard_proxy
+
 # use your own bard key 'YOUR-BARD-KEY' instead.
-docker run -p 8671:8671 -e BARD_PROXY_API_KEY=YOUR-BARD-KEY bard_proxy
+docker run -d --name bard_proxy -p 8671:8671 -e BARD_PROXY_API_KEY=YOUR-BARD-KEY bard_proxy
 ```
 
 ### Method 2: Start In Current Project
