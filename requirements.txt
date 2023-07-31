@@ -1,0 +1,3 @@
+bardapi==0.1.29
+flask
+python-dotenv
