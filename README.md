@@ -12,19 +12,18 @@ Access from <a ref="https://bard.google.com/">Bard</a>
 
 ## Quick Start
 
-### Method 1: Quick Start by Docker 
+### Method 1: Quick Start by Docker (recommended, in 5 seconds)
 
 ```commandline
-docker pull shinexy/bard_proxy
-
 # use your own bard key 'YOUR-BARD-KEY' instead.
-docker run -d --name bard_proxy -p 8671:8671 -e BARD_PROXY_API_KEY=YOUR-BARD-KEY bard_proxy
+
+docker run -d --name bard_proxy -p 8671:8671 -e BARD_PROXY_API_KEY=YOUR-BARD-KEY shinexy/bard_proxy
 ```
 
 ### Method 2: Start In Current Project
-1. set your bard key in .env file
-2. start python project
-> python main.py
+1. clone current project into your local dir.
+2. set your bard key in .env file
+3. launch python project `python main.py`
 
 
 ## verify
