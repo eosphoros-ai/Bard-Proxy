@@ -1,6 +1,7 @@
 # Bard-Proxy
 Proxy for Bard LLM
 
+
 ## How to get your bard key
 
 Access from <a ref="https://bard.google.com/">Bard</a> 
